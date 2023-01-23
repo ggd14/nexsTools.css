@@ -1,6 +1,8 @@
 # nexsTools.css
 
-NexsTools.css is a set of basic tools written in SCSS, designed to help beginners and developers in creating 
+[Versión en español](https://github.com/ggd14/nexsTools.css/blob/main/LEEME.md)
+
+nexsTools.css is a set of basic tools written in SCSS, designed to help beginners and developers in creating 
 web projects. 
 
 They're made to be easily implementable in your project and can be used alongside any CSS framework.
@@ -9,10 +11,10 @@ They're made to be easily implementable in your project and can be used alongsid
 **Table of content**
 
 1. [Instalation](#install)
-2. [Adding the stylesheet](#addCss)
+2. [Adding the stylesheet](#addcss)
 3. [Using the css classes](#use)
-4. [Flex Layout](#flexLayout)
-5. [Media Query](#mediaQuery)
+4. [Flex Layout](#flexlayout)
+5. [Media Query](#mediaquery)
 6. [Z-index](#zindex)
 
 ## Instalation. <a name='install'></a>
@@ -20,7 +22,7 @@ They're made to be easily implementable in your project and can be used alongsid
 To install nexsTools.css in your project, simply include the SCSS file in your project and compile it along with the
 rest of your styles. You can also import only the necessary parts of the file to reduce the final size of the CSS file.
 
-# Adding the stylesheet. <a name='addCss'></a>
+# Adding the stylesheet. <a name='addcss'></a>
 
 You can import the SCSS files directly into your main SCSS file and compile them along 
 with the rest of your styles. This allows you to easily customize the variables and use the tools as they are designed.
@@ -36,7 +38,7 @@ to be able to use it.
 Once installed, you can start using the nexsTools.css tools in your project. Here are some examples of how you can 
 use some included tools:
 
-## Flex Layout <a name='flexLayout'></a>
+## Flex Layout <a name='flexlayout'></a>
 
 **_flex-layout.scss**  includes a set of commonly used CSS Flex classes that make it easy to distribute and center 
 elements in a container. The `flex` class must be included.
@@ -90,7 +92,7 @@ elements in a container. The `flex` class must be included.
 -`align-self-stretch`
 
 
-# Media Query <a name='mediaQuery'></a>
+# Media Query <a name='mediaquery'></a>
 
 **_media-query.scss** The media query toolset includes a set of tools that will help you create styles adapted to 
 different resolutions and devices.

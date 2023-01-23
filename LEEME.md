@@ -8,10 +8,10 @@ Están diseñadas para ser fácilmente implementables en el proyecto y pueden ut
 **Índice**
 
 1. [Instalación](#install)
-2. [Añadiendo la hoja de estilo](#addCss)
+2. [Añadiendo la hoja de estilo](#addcss)
 3. [Uso de las clases](#use)
-4. [Flex Layout](#flexLayout)
-5. [Media Query](#mediaQuery)
+4. [Flex Layout](#flexlayout)
+5. [Media Query](#mediaquery)
 6. [Z-index](#zindex)
 
 
@@ -21,7 +21,7 @@ Para instalar NexsTools.css en su proyecto, simplemente incluya el archivo SCSS 
 resto de sus estilos. También puede importar solo las partes necesarias del archivo para reducir el tamaño final del 
 archivo CSS.
 
-# Añadiendo la hoja de estilo. <a name='addCss'></a>
+# Añadiendo la hoja de estilo. <a name='addcss'></a>
 
 Puedes importar los archivos SCSS directamente en tu archivo SCSS principal y 
 compilarlos junto con el resto de tus estilos. Esto te permite personalizar fácilmente las variables y utilizar 
@@ -38,7 +38,7 @@ proyecto para poder utilizarlo.
 Una vez instalado, puede comenzar a utilizar las herramientas de NexsTools.css en su proyecto. Aquí hay algunos 
 ejemplos de cómo puede utilizar algunas de las herramientas incluidas:
 
-## Flex Layout <a name='flexLayout'></a>
+## Flex Layout <a name='flexlayout'></a>
 
 **_flex-layout.scss** incluye un conjunto de clases más utilizadas de CSS Flex que facilitan la distribución y 
 centramiento de elementos en un contenedor. Se debe incluir la clase `flex`.
@@ -92,7 +92,7 @@ centramiento de elementos en un contenedor. Se debe incluir la clase `flex`.
 -`align-self-stretch`
 
 
-# Media Query <a name='mediaQuery'></a>
+# Media Query <a name='mediaquery'></a>
 
 **_media-query.scss** incluye un conjunto de herramientas de media queries que te ayudarán a crear estilos 
 adaptados a diferentes resoluciones y dispositivos.
