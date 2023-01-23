@@ -1,0 +1,68 @@
+/* ==========================================================================
+Flex Layout
+=============================================================================
+* File description:
+*   CSS Flex classes for align and distribute elements
+*   Examples to how to use: https://codepen.io/ggd14/pen/poZeYNw
+*
+*/
+
+$flex-properties : (
+        display:(
+                flex :flex
+        ),
+        flex-direction: (
+                row            : row,
+                column         : column,
+                row-reverse    : row-reverse,
+                column-reverse : column-reverse
+        ),
+        justify-content: (
+                justify-start   : start,
+                justify-center  : center,
+                justify-end     : end,
+                justify-around  : space-around,
+                justify-between : space-between,
+                justify-evenly  : space-evenly
+        ),
+        align-items: (
+                items-start   : start,
+                items-center  : center,
+                items-end     : end,
+                items-stretch : stretch
+        ),
+        align-self: (
+                self-auto     : auto,
+                self-stretch  : stretch,
+                self-center   : center,
+                self-start    : flex-start,
+                self-end      : flex-end,
+                self-baseline : baseline,
+        ),
+        flex-wrap: (
+                flex-wrap         : wrap,
+                flex-wrap-reverse : wrap-reverse
+        ),
+        gap: (
+                gap-5  : 5px,
+                gap-10 : 10px,
+                gap-15 : 15px
+        ),
+        flex: (
+                fill : 1 1 auto
+        )
+);
+
+@mixin flex-class($css-properties) {
+  @each $property, $values in $css-properties {
+    @each $name, $value in $values {
+      .#{$name} {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@include flex-class($flex-properties);
+
+

@@ -1,0 +1,80 @@
+/* ==========================================================================
+Media Query
+=============================================================================
+* File description:
+*    This file defines sets of breakpoints and @mixin for media queries
+*
+*/
+
+/* Media query min or max by size
+========================================================================== */
+
+/*
+* How to use:
+*	@include media-query('tablet', 'min/max') { ... }
+*	Result: @media only screen and (min-width: 760px)
+*/
+
+$breakpoints : (
+        'mobile'        : 370px,
+        'tablet'        : 768px,
+        'desktop'       : 1280px,
+        'large-desktop'  : 1536px
+);
+
+@mixin media-query($width, $type) {
+  @if map_has_key($breakpoints, $width) {
+    $width : map_get($breakpoints, $width);
+    @if $type == max {
+      $width : $width - .2px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/*  Media query for touch devices
+========================================================================== */
+
+/*
+*	How to use:
+*	@include media-type('mobile') { ... }
+*	@include media-type('desktop') { ... }
+*/
+
+@mixin media-type($type) {
+  @if ($type == 'mobile') {
+    @media (hover : none) {
+      @content;
+    }
+  } @else if ($type == 'desktop') {
+    @media (hover : hover) {
+      @content;
+    }
+  }
+}
+
+
+/*  Hide visible-hide
+========================================================================== */
+
+/*
+*	How to use:
+*	Use the breakpoints names
+*   .hide-at-tablet
+*   .show-at-desktop
+*/
+
+@each $breakpoint, $value in $breakpoints {
+  @include media-query($breakpoint, 'max') {
+    .hide-at-#{$breakpoint} {
+      display : none !important;
+    }
+  }
+  @include media-query($breakpoint, 'min') {
+    .show-at-#{$breakpoint} {
+      display : none !important;
+    }
+  }
+}

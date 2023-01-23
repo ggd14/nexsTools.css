@@ -1,0 +1,25 @@
+/* ==========================================================================
+Z-index position
+=============================================================================
+* File description:
+*   CSS  classes for align and distribute elements
+*   Examples to how to use: https://codepen.io/ggd14/pen/abjqWYR
+*
+*/
+
+/*
+* Add more indexes that you need
+* Example:
+*  @include z-index(modal);
+* result value of z-index: 102
+*/
+
+$z-indexes    : ("modal", "low");
+
+@function z($name) {
+  @return (length($z-indexes) - index($z-indexes, $name)) + 100;
+}
+
+@mixin z-index($index) {
+  z-index : z($index);
+}
