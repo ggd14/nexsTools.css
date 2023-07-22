@@ -18,17 +18,17 @@ $flex-properties : (
                 column-reverse : column-reverse
         ),
         justify-content: (
-                justify-start   : start,
+                justify-start   : flex-start,
                 justify-center  : center,
-                justify-end     : end,
+                justify-end     : flex-end,
                 justify-around  : space-around,
                 justify-between : space-between,
                 justify-evenly  : space-evenly
         ),
         align-items: (
-                items-start   : start,
+                items-start   : flex-start,
                 items-center  : center,
-                items-end     : end,
+                items-end     : flex-end,
                 items-stretch : stretch
         ),
         align-self: (
